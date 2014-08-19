@@ -5,7 +5,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 /**
  * Use this class main entity to store json response from goEuro suggest location api.
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class Location {

@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.HttpGet;
@@ -24,7 +23,7 @@ import com.goeuro.javatest.mjmendo.service.GoEuroTestService;
 /**
  * This class has all the code for the challenge
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class GoEuroTestServiceImpl implements GoEuroTestService {
@@ -32,9 +31,10 @@ public class GoEuroTestServiceImpl implements GoEuroTestService {
 
 	private final static Logger logger = Logger.getLogger(GoEuroTestServiceImpl.class.getName());
 	
-	private String GOEURO_API_DEFAULT_URL = "http://api.goeuro.com/api/v2/position/suggest/en/";
-	private String OUTPUT_FILE_NAME = "./output.csv";
-	private static final String FILE_HEADERS = "Id,Name,Type, Latitude,Longitude";
+	private final String GOEURO_API_DEFAULT_URL = "http://api.goeuro.com/api/v2/position/suggest/en/";
+	private final String OUTPUT_FILE_NAME = "./output.csv";
+	private final String FILE_HEADERS = "Id,Name,Type, Latitude,Longitude";
+	private final String SEPARATOR = ",";
 
 	@Override
 	public void performTestAsRequested(String searchText) {
@@ -104,15 +104,15 @@ public class GoEuroTestServiceImpl implements GoEuroTestService {
 		
 		content.append(FILE_HEADERS + "\n");
 		
+		String line;
         for (Location location : locations) {
-			content.append(StringUtils.join(new String[]{
-												location.getId().toString(),
-												location.getName(),
-												location.getType(),
-												location.getGeoPosition().getLatitude().toString(),
-												location.getGeoPosition().getLongitude().toString(),
-											},",")
-							).append("\n");
+        	line = location.getId().toString() + SEPARATOR + 
+        			location.getName() + SEPARATOR + 
+        			location.getType() + SEPARATOR +
+        			location.getGeoPosition().getLatitude().toString() + SEPARATOR +
+        			location.getGeoPosition().getLongitude().toString();
+        	
+			content.append(line).append("\n");
 			
 		}
         

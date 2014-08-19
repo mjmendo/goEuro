@@ -14,7 +14,7 @@ import com.goeuro.javatest.mjmendo.service.impl.GoEuroTestServiceImpl;
 /**
  * Test the main method of the service
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class TestGoEuropeServiceMainMethod {

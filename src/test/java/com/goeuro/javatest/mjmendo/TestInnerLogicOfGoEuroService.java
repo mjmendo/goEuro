@@ -17,7 +17,7 @@ import com.goeuro.javatest.mjmendo.service.impl.GoEuroTestServiceImpl;
 /**
  * Test the service parts individually
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class TestInnerLogicOfGoEuroService {

@@ -6,7 +6,7 @@ package com.goeuro.javatest.mjmendo.service;
 /**
  * This interface represents the service that solves the challenge.
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public interface GoEuroTestService {

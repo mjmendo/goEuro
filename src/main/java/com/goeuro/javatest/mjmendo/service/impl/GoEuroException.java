@@ -4,7 +4,7 @@ package com.goeuro.javatest.mjmendo.service.impl;
  * Use this class to wrap all exceptions while processing requests. 
  * Throw this class outside GoEuro challenge scope to callers to handle.
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class GoEuroException extends RuntimeException {

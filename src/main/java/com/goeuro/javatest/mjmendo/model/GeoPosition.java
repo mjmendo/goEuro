@@ -6,7 +6,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 /**
  * Use this class to store geo position data.
  * 
- * @author chelazo
+ * @author mjmendo.dev@gmail.com
  *
  */
 public class GeoPosition {
