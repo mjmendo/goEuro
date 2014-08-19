@@ -6,7 +6,7 @@ import com.goeuro.javatest.mjmendo.service.GoEuroTestService;
 import com.goeuro.javatest.mjmendo.service.impl.GoEuroTestServiceImpl;
 
 /**
- * Hello world!
+ * @author mjmendo.dev@gmail.com
  * 
  */
 public class App {
